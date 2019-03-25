@@ -22,7 +22,7 @@ class BlockData{
     }
 };
 
-// 一个俄罗斯方块的组成4*4
+// 一个方块的组成4*4
 const ROW: number = 4;
 const COL: number = 4;
 class TetrisBlock{

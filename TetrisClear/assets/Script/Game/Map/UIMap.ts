@@ -4,6 +4,7 @@ Author: wusuiyong
 Date: 2019-3-24 11:40
 Description: map ui 
 **************************************************/ 
+
 import UIView from "../../KxCocos/UI/UIView";
 
 const {ccclass, property} = cc._decorator;
@@ -16,6 +17,12 @@ export default class UIMap extends UIView {
 
     @property(cc.Button)
     leftBtn: cc.Button = null;
+    @property(cc.Button)
+    rightBtn: cc.Button = null;
+    @property(cc.Button)
+    downBtn: cc.Button = null;
+    @property(cc.Button)
+    rorateBtn: cc.Button = null;
 
     start () {
 
