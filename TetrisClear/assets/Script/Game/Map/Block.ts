@@ -34,7 +34,23 @@ class TetrisBlock{
 
     // 右转
     rotate(): void{
-        
+        if(ROW != COL){
+            return;
+        }
+
+        // 将一个二位数组右转
+        let blockDataList: BlockData[] = [];
+        for(let i = 0; i < COL; ++i){
+            for(let j = ROW - 1; j >= 0; --j){
+                blockDataList.push(this._blockDatas[i][j]);
+            }
+        }
+
+        for(let i = 0; i < ROW; ++i){
+            for(let j = 0; j < COL; ++j){
+                this._blockDatas[i][j] = blockDataList.pop();
+            }
+        }
     }
 
     // 重置块
